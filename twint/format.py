@@ -20,7 +20,7 @@ def Tweet(config, t):
         output = output.replace("{language}", t.lang)
         output = output.replace("{hashtags}", ",".join(t.hashtags))
         output = output.replace("{cashtags}", ",".join(t.cashtags))
-        output = output.replace("{replies}", t.replies_count)
+        output = output.replace("{replies}", str(t.replies_count))
         output = output.replace("{retweets}", t.retweets_count)
         output = output.replace("{likes}", t.likes_count)
         output = output.replace("{link}", t.link)
